@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/negi8/Downloads/index_2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankit Singh Negi — Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B0F14;
+    --paper:#E9E6DD;
+    --panel:#161D26;
+    --amber:#D6A24C;
+    --teal:#4FA8A2;
+    --line:rgba(233,230,221,0.12);
+    --muted:#8B93A0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
+
+  /* NAV */
+  nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:28px 0;
+  }
+  .logo{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;font-weight:500;
+    border:1.5px solid var(--line);
+    width:40px;height:40px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .navlinks{display:flex;gap:28px;}
+  .navlinks a{
+    font-size:14px;font-weight:500;color:var(--muted);
+    transition:color .2s;
+  }
+  .navlinks a:hover{color:var(--paper);}
+
+  /* HERO */
+  .hero{
+    padding:64px 0 40px;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.06em;
+    color:var(--teal);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";width:8px;height:8px;background:var(--teal);border-radius:50%;
+    animation:pulse 2s infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(36px,5vw,58px);
+    line-height:1.08;
+    letter-spacing:-.01em;
+  }
+  h1 .accent{color:var(--amber);font-style:italic;font-weight:400;}
+  .sub{
+    margin-top:20px;
+    font-size:17px;
+    color:var(--muted);
+    max-width:480px;
+  }
+  .cta-row{
+    display:flex;gap:16px;margin-top:32px;align-items:center;flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;font-weight:500;
+    padding:13px 22px;border-radius:8px;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:var(--amber);color:var(--ink);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(214,162,76,0.25);}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--paper);}
+
+  /* SIGNATURE CHART CARD */
+  .chart-card{
+    background:var(--panel);
+    color:var(--paper);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px 24px 20px;
+    position:relative;
+    overflow:hidden;
+  }
+  .chart-card .cc-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;color:rgba(233,230,221,.5);
+    display:flex;justify-content:space-between;margin-bottom:14px;
+  }
+  .chart-card svg{width:100%;display:block;}
+  .chart-path{
+    fill:none;stroke:var(--amber);stroke-width:2.5;
+    stroke-dasharray:600;stroke-dashoffset:600;
+    animation:draw 2.2s ease forwards .3s;
+  }
+  .chart-path2{
+    fill:none;stroke:var(--teal);stroke-width:2;
+    stroke-dasharray:600;stroke-dashoffset:600;
+    animation:draw 2.2s ease forwards .6s;
+    opacity:.85;
+  }
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  .cc-foot{
+    display:flex;justify-content:space-between;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;color:rgba(233,230,221,.5);
+    margin-top:10px;
+  }
+  .cc-foot span:first-child{color:var(--amber);}
+
+  /* SECTION HEADERS */
+  .section{padding:64px 0;border-top:1px solid var(--line);}
+  .section-head{
+    display:flex;align-items:baseline;gap:16px;margin-bottom:36px;
+  }
+  .section-num{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;color:var(--muted);
+  }
+  .section-title{
+    font-family:'Fraunces',serif;font-size:28px;font-weight:600;
+  }
+
+  /* SKILLS */
+  .skill-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .skill-group h4{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;color:var(--teal);text-transform:uppercase;letter-spacing:.05em;
+    margin-bottom:12px;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:20px;
+    background:var(--panel);
+  }
+
+  /* PROJECTS */
+  .project{
+    display:grid;grid-template-columns:auto 1fr auto;gap:24px;
+    padding:26px 0;border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+  .project:first-of-type{border-top:1px solid var(--line);}
+  .proj-year{
+    font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);
+    padding-top:4px;min-width:44px;
+  }
+  .proj-title{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin-bottom:8px;}
+  .proj-desc{color:var(--muted);font-size:14.5px;max-width:560px;}
+  .proj-stack{
+    display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;
+  }
+  .proj-stack span{
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--teal);
+    background:rgba(47,122,121,0.08);padding:3px 9px;border-radius:12px;
+  }
+  .proj-metric{
+    font-family:'JetBrains Mono',monospace;
+    text-align:right;min-width:110px;
+  }
+  .proj-metric .num{font-size:22px;font-weight:600;color:var(--amber);}
+  .proj-metric .lbl{font-size:11px;color:var(--muted);margin-top:2px;}
+
+  /* EDU + CERTS */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+  .edu-item{margin-bottom:22px;}
+  .edu-item .deg{font-family:'Fraunces',serif;font-size:17px;font-weight:600;}
+  .edu-item .school{color:var(--muted);font-size:14px;margin-top:2px;}
+  .edu-item .yr{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal);margin-top:2px;}
+  ul.certs{list-style:none;}
+  ul.certs li{
+    font-size:14px;padding:10px 0;border-bottom:1px solid var(--line);
+    display:flex;gap:10px;
+  }
+  ul.certs li::before{content:"—";color:var(--amber);}
+
+  /* CONTACT / FOOTER */
+  footer{
+    padding:60px 0 40px;
+    border-top:1px solid var(--line);
+  }
+  .foot-head{
+    font-family:'Fraunces',serif;font-size:34px;font-weight:600;
+    margin-bottom:24px;max-width:600px;
+  }
+  .foot-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:40px;}
+  .foot-links a{
+    font-family:'JetBrains Mono',monospace;font-size:13px;
+    border:1.5px solid var(--line);padding:10px 18px;border-radius:8px;
+    transition:border-color .15s, background .15s;
+  }
+  .foot-links a:hover{border-color:var(--ink);background:rgba(15,27,43,0.03);}
+  .foot-bottom{
+    display:flex;justify-content:space-between;color:var(--muted);
+    font-size:13px;flex-wrap:wrap;gap:8px;
+  }
+
+  @media(max-width:800px){
+    .hero{grid-template-columns:1fr;}
+    .skill-groups{grid-template-columns:1fr;}
+    .grid-2{grid-template-columns:1fr;}
+    .project{grid-template-columns:1fr;}
+    .proj-metric{text-align:left;margin-top:8px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="file:///C:/Users/negi8/Downloads/index_2.html#" class="logo">AN</a>
+    <div class="navlinks">
+      <a href="file:///C:/Users/negi8/Downloads/index_2.html#projects">Projects</a>
+      <a href="file:///C:/Users/negi8/Downloads/index_2.html#skills">Skills</a>
+      <a href="file:///C:/Users/negi8/Downloads/index_2.html#education">Education</a>
+      <a href="file:///C:/Users/negi8/Downloads/index_2.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">OPEN TO DATA ANALYST ROLES</div>
+      <h1>I'm Ankit, an MCA student who builds <span class="accent">data pipelines</span> and dashboards that hold up.</h1>
+      <p class="sub">I work mostly in Python, SQL, and Power BI — cleaning messy datasets, building models, and shipping dashboards people actually use. Based in Dehradun, India.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="file:///C:/Users/negi8/Downloads/Ankit_Negi_Resume_Data_Analyst.pdf" download="">↓ Download resume</a>
+        <a class="btn btn-ghost" href="mailto:negi88898@gmail.com">Say hello</a>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="cc-label"><span>INDIA_RANKINGS.db</span><span>2004 → 2026</span></div>
+      <svg viewBox="0 0 300 110" preserveAspectRatio="none">
+        <path class="chart-path" d="M0,80 C30,70 45,40 70,45 C95,50 110,20 140,25 C170,30 185,60 210,55 C235,50 250,15 300,20"></path>
+        <path class="chart-path2" d="M0,95 C30,90 45,75 70,78 C95,80 110,60 140,65 C170,68 185,50 210,48 C235,46 250,35 300,38"></path>
+      </svg>
+      <div class="cc-foot"><span>● HDI trend</span><span>22 years · 9 indices</span></div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section class="section" id="skills">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-title">What I work with</span>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">C</span><span class="tag">Java</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Libraries</h4>
+        <div class="tags">
+          <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <div class="tags">
+          <span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">MySQL</span><span class="tag">Flask</span><span class="tag">Jupyter</span><span class="tag">GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-title">Projects</span>
+    </div>
+
+    <div class="project">
+      <div class="proj-year">2026</div>
+      <div>
+        <div class="proj-title">India Rankings Analytics: UPA vs NDA</div>
+        <div class="proj-desc">End-to-end analytics pipeline comparing India's standing across 9 global indices (HDI, Corruption, Press Freedom, Poverty and more) spanning 2004–2026, sourced from UNDP, World Bank, and RBI. Delivered via an interactive Power BI dashboard and stakeholder-ready presentation.</div>
+        <div class="proj-stack"><span>Python</span><span>SQL</span><span>Excel</span><span>Power BI</span></div>
+      </div>
+      <div class="proj-metric"><div class="num">22yr</div><div class="lbl">of data, 9 indices</div></div>
+    </div>
+
+    <div class="project">
+      <div class="proj-year">2024</div>
+      <div>
+        <div class="proj-title">AI Lost &amp; Found System</div>
+        <div class="proj-desc">Flask web app with a MySQL backend using cosine similarity to predict item owners. Responsive UI with real-time search and full CRUD, cutting manual lookup time significantly.</div>
+        <div class="proj-stack"><span>Flask</span><span>MySQL</span><span>Python</span></div>
+      </div>
+      <div class="proj-metric"><div class="num">~85%</div><div class="lbl">match accuracy</div></div>
+    </div>
+
+    <div class="project">
+      <div class="proj-year">2024</div>
+      <div>
+        <div class="proj-title">Retail Customer Analytics &amp; Demand Forecasting</div>
+        <div class="proj-desc">Analyzed 10,000+ retail transactions and applied K-Means clustering to segment customers into 4 actionable groups. Built 3 interactive Power BI dashboards covering revenue, churn risk, and demand forecasts.</div>
+        <div class="proj-stack"><span>Python</span><span>SQL</span><span>Power BI</span><span>K-Means</span></div>
+      </div>
+      <div class="proj-metric"><div class="num">10K+</div><div class="lbl">transactions analyzed</div></div>
+    </div>
+
+    <div class="project">
+      <div class="proj-year">2023</div>
+      <div>
+        <div class="proj-title">Smart Traffic Control System</div>
+        <div class="proj-desc">Multi-lane traffic signal simulation built with Java OOP — inheritance, polymorphism, and abstraction driving dynamic signal timing.</div>
+        <div class="proj-stack"><span>Java</span><span>OOP</span></div>
+      </div>
+      <div class="proj-metric"><div class="num">25%</div><div class="lbl">less wait time</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-title">Education &amp; certifications</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="edu-item">
+          <div class="deg">Master of Computer Applications (MCA)</div>
+          <div class="school">DIT University, Dehradun</div>
+          <div class="yr">2025 – Present · GPA 7.48/10.0</div>
+        </div>
+        <div class="edu-item">
+          <div class="deg">B.Sc. — Physics, Mathematics &amp; IT</div>
+          <div class="school">Kumaun University, Nainital</div>
+          <div class="yr">2020 – 2023</div>
+        </div>
+      </div>
+      <div>
+        <ul class="certs">
+          <li>Prepare Data for Analysis with Power BI — Microsoft, Dec 2025</li>
+          <li>Cleared IBPS PO &amp; SBI PO Preliminary exams — top percentile in quant &amp; reasoning</li>
+          <li>Strong academic record in ML and data science coursework</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-head">Working on something data-heavy? I'd like to hear about it.</div>
+    <div class="foot-links">
+      <a href="mailto:negi88898@gmail.com">negi88898@gmail.com</a>
+      <a href="tel:+917055147998">+91-7055147998</a>
+      <a href="https://github.com/negi88898" target="_blank">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/ankit-negi-68b645215/" target="_blank">LinkedIn ↗</a>
+    </div>
+    <div class="foot-bottom">
+      <span>Ankit Singh Negi · Dehradun, Uttarakhand</span>
+      <span>Updated July 2026</span>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
