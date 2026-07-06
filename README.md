@@ -1,1 +1,0 @@
-# negi88898.github.io
