@@ -167,6 +167,7 @@
   }
   .proj-title{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin-bottom:8px;}
   .proj-desc{color:var(--muted);font-size:14.5px;max-width:560px;}
+  .proj-img{width:100%;max-width:560px;max-height:180px;object-fit:cover;border-radius:10px;border:1px solid var(--line);margin-bottom:14px;}
   .proj-stack{
     display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;
   }
@@ -239,7 +240,7 @@
     <div>
       <div class="eyebrow">OPEN TO DATA ANALYST & DATA SCIENTIST ROLES</div>
       <h1>I'm Ankit, an MCA student who builds <span class="accent">data pipelines</span> and dashboards that hold up.</h1>
-      <p class="sub">I work mostly in Python, SQL, and Power BI — cleaning messy datasets, building models, and shipping dashboards people actually use. Based in Dehradun, India.</p>
+      <p class="sub">I work mostly in Python, SQL, Snowflake, and Power BI — cleaning messy datasets, building models, and shipping dashboards people actually use. Based in Dehradun, India.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="Ankit_Negi_DATAANALYST_Resume.pdf" download>↓ Download resume</a>
         <a class="btn btn-ghost" href="mailto:negi88898@gmail.com">Say hello</a>
@@ -247,12 +248,12 @@
     </div>
 
     <div class="chart-card">
-      <div class="cc-label"><span>INDIA_RANKINGS.db</span><span>2004 → 2026</span></div>
+      <div class="cc-label"><span>BANKING_ANALYTICS.db</span><span>Snowflake</span></div>
       <svg viewBox="0 0 300 110" preserveAspectRatio="none">
         <path class="chart-path" d="M0,80 C30,70 45,40 70,45 C95,50 110,20 140,25 C170,30 185,60 210,55 C235,50 250,15 300,20"/>
         <path class="chart-path2" d="M0,95 C30,90 45,75 70,78 C95,80 110,60 140,65 C170,68 185,50 210,48 C235,46 250,35 300,38"/>
       </svg>
-      <div class="cc-foot"><span>● HDI trend</span><span>22 years · 9 indices</span></div>
+      <div class="cc-foot"><span>● Spend trend</span><span>12,360 transactions</span></div>
     </div>
   </section>
 </div>
@@ -279,7 +280,7 @@
       <div class="skill-group">
         <h4>Tools</h4>
         <div class="tags">
-          <span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">MySQL</span><span class="tag">Flask</span><span class="tag">Jupyter</span><span class="tag">GitHub</span>
+          <span class="tag">Snowflake</span><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">MySQL</span><span class="tag">Flask</span><span class="tag">Jupyter</span><span class="tag">GitHub</span>
         </div>
       </div>
     </div>
@@ -294,6 +295,18 @@
     <div class="project">
       <div class="proj-year">2026</div>
       <div>
+        <img class="proj-img" src="images/banking-spend-by-category.png" alt="Retail Banking Transaction Analytics — spend by category chart">
+        <div class="proj-title">Retail Banking Transaction Analytics Platform</div>
+        <div class="proj-desc">Designed and executed a Snowflake star schema (warehouses, stages, secure data-sharing views) for 12,000+ retail banking transactions, with a Python ETL pipeline, live FX-rate API integration, and a data quality framework achieving a 94.9% clean-data pass rate. Diagnosed and resolved real data-loading issues during live execution.</div>
+        <div class="proj-stack"><span>Snowflake</span><span>Python</span><span>SQL</span><span>Agile</span></div>
+      </div>
+      <div class="proj-metric"><div class="num">94.9%</div><div class="lbl">data quality pass rate</div></div>
+    </div>
+
+    <div class="project">
+      <div class="proj-year">2026</div>
+      <div>
+        <img class="proj-img" src="images/india-rankings-dashboard.png" alt="India Rankings Analytics dashboard">
         <div class="proj-title">India Rankings Analytics: UPA vs NDA</div>
         <div class="proj-desc">End-to-end analytics pipeline comparing India's standing across 9 global indices (HDI, Corruption, Press Freedom, Poverty and more) spanning 2004–2026, sourced from UNDP, World Bank, and RBI. Delivered via an interactive Power BI dashboard and stakeholder-ready presentation.</div>
         <div class="proj-stack"><span>Python</span><span>SQL</span><span>Excel</span><span>Power BI</span></div>
@@ -304,6 +317,7 @@
     <div class="project">
       <div class="proj-year">2025</div>
       <div>
+        <img class="proj-img" src="images/ai-lostfound-site.png" alt="AI Lost and Found Portal live site">
         <div class="proj-title">AI Lost & Found System</div>
         <div class="proj-desc">Flask web app with a MySQL backend using cosine similarity to predict item owners. Responsive UI with real-time search and full CRUD, cutting manual lookup time significantly.</div>
         <div class="proj-stack"><span>Flask</span><span>MySQL</span><span>Python</span></div>
@@ -314,21 +328,12 @@
     <div class="project">
       <div class="proj-year">2025</div>
       <div>
+        <img class="proj-img" src="images/retail-customer-segments.png" alt="Retail Customer Analytics Power BI segments">
         <div class="proj-title">Retail Customer Analytics & Demand Forecasting</div>
         <div class="proj-desc">Analyzed 10,000+ retail transactions and applied K-Means clustering to segment customers into 4 actionable groups. Built 3 interactive Power BI dashboards covering revenue, churn risk, and demand forecasts.</div>
         <div class="proj-stack"><span>Python</span><span>SQL</span><span>Power BI</span><span>K-Means</span></div>
       </div>
       <div class="proj-metric"><div class="num">10K+</div><div class="lbl">transactions analyzed</div></div>
-    </div>
-
-    <div class="project">
-      <div class="proj-year">2025</div>
-      <div>
-        <div class="proj-title">Smart Traffic Control System</div>
-        <div class="proj-desc">Multi-lane traffic signal simulation built with Java OOP — inheritance, polymorphism, and abstraction driving dynamic signal timing.</div>
-        <div class="proj-stack"><span>Java</span><span>OOP</span></div>
-      </div>
-      <div class="proj-metric"><div class="num">25%</div><div class="lbl">less wait time</div></div>
     </div>
   </section>
 
@@ -352,6 +357,7 @@
       </div>
       <div>
         <ul class="certs">
+          <li>SQL (Basic) — HackerRank Certificate of Accomplishment, July 2026</li>
           <li>Prepare Data for Analysis with Power BI — Microsoft, Dec 2025</li>
           <li>Cleared IBPS PO & SBI PO Preliminary exams — top percentile in quant & reasoning</li>
           <li>Strong academic record in ML and data science coursework</li>
